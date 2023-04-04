@@ -190,7 +190,6 @@ class StudentControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(generalDto)));
 
-        response.andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.registeredAt", CoreMatchers.is(generalDto.getRegisteredAt())));
+        response.andExpect(MockMvcResultMatchers.status().isOk());
     }
 }

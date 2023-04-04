@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
-@RequiredArgsConstructor
 @Component
+@RequiredArgsConstructor
 public class GroupRegistrationPersistenceImpl implements GroupRegistrationPersistence {
 
     private final StudentRepository studentRepository;

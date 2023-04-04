@@ -9,8 +9,8 @@ import felipe.springframework.university.persistence.repository.StudentRepositor
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@RequiredArgsConstructor
 @Component
+@RequiredArgsConstructor
 public class StudentPersistenceImpl implements StudentPersistence{
 
     private final StudentRepository studentRepository;
