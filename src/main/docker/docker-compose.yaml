@@ -3,6 +3,9 @@ services:
     image: 'docker-spring-boot-postgres:latest'
     build:
       context: .
+      dockerfile : Dockerfile
+    ports:
+      - "8080:8080"
     container_name: app
     depends_on:
       - db
@@ -14,6 +17,8 @@ services:
 
   db:
     image: 'postgres:latest'
+    ports:
+      - "5432:5432"
     container_name: db
     environment:
       - POSTGRES_USER=postgres
